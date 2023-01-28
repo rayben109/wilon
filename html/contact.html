@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--<title>Profile Card UI Design</title>-->
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Boxicons CSS -->
+    <link
+      href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+/* Google Fonts - Poppins */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+a{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+  }
+h2{
+    padding-top: 10px;
+    background-color: #8e44ad;
+    width: 100%;
+    height: 60px;
+    border-bottom: 2px solid;
+    border-bottom-width: 70%;
+    font-weight: bold;
+    color: white;
+  }
+  .footer{
+    background-color: #8e44ad;
+    width: 100%;
+    height: 90px;
+    border-bottom: 2px solid;
+    border-bottom-width: 70%;
+    font-weight: bold;
+    color: white;
+  }
+body {
+  background-color: #f4f4f4;
+}
+.profile-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 370px;
+  width: 90%;
+  background: #fff;
+  border-radius: 24px;
+  padding: 25px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+.profile-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 36%;
+  width: 100%;
+  border-radius: 24px 24px 0 0;
+  background-color: #8e44ad;
+}
+.image {
+  position: relative;
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  background-color: #fff;
+  padding: 3px;
+  margin-bottom: 10px;
+}
+.image .profile-img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #fff;
+}
+.profile-card .text-data {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #8e44ad;
+}
+.text-data .name {
+  font-size: 22px;
+  font-weight: 500;
+}
+.text-data .job {
+  font-size: 15px;
+  font-weight: 400;
+}
+.profile-card .media-buttons {
+  display: flex;
+  align-items: center;
+  margin-top: 15px;
+}
+.media-buttons .link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 18px;
+  height: 34px;
+  width: 34px;
+  border-radius: 50%;
+  margin: 0 8px;
+  background-color: #8e44ad;
+  text-decoration: none;
+}
+.profile-card .buttons {
+  display: flex;
+  margin-top: 25px;
+  padding-top: 60px;
+}
+.buttons .button {
+  color: #fff;
+  font-size: 14px;
+  font-weight: 400;
+  border: none;
+  border-radius: 24px;
+  margin: 0 10px;
+  padding: 8px 24px;
+  background-color: #8e44ad;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.buttons .button:hover {
+  background-color: #0e4bf1;
+}
+.profile-card .analytics {
+  display: flex;
+  align-items: center;
+  margin-top: 25px;
+}
+.analytics .data {
+  display: flex;
+  align-items: center;
+  color: #333;
+  padding: 0 20px;
+  border-right: 2px solid #e7e7e7;
+}
+.data i {
+  font-size: 18px;
+  margin-right: 6px;
+}
+.data:last-child {
+  border-right: none;
+}
+/* The side navigation menu */
+.sidenav {
+  height: 100%; /* 100% Full-height */
+  width: 0; /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Stay on top */
+  top: 0; /* Stay at the top */
+  left: 0;
+  background-color: #8e44ad; /* purple*/
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 60px; /* Place content 60px from the top */
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
+
+/* The navigation menu links */
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #fff;
+  display: block;
+  transition: 0.3s;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+ #icon1{
+   float: left;
+   padding: 0px;
+   margin: 7px;
+   font-size: 30px;
+   color: white;
+ }
+    </style>
+  </head>
+  <body>
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="Dashboard.html">Dashboard</a>
+  <a href="profile.html">Profile</a>
+  <a href="#">Client History</a>
+  <a href="#">Setting</a>
+  <a href="services.html">Services</a>
+  <a href="contact.html">Contact us</a>
+</div>
+
+<!-- Use any element to open the sidenav -->
+<span onclick="openNav()" id="icon1"><i class="fa fa-fw fa-bars"></i></span>
+
+<!-- Add all page content inside this div if you want the side nav to push page content to the right (not used if you only want the sidenav to sit on top of the page -->
+
+  <div class="dashboard">
+    <h2 class="text-center text-white">
+      Contact us
+    </h2>
+  </div>
+  <br>
+  <center>
+    <div class="profile-card">
+      <div class="image">
+        <img src="6.jpg" alt="" class="profile-img">
+      </div>
+
+      <div class="text-data">
+        <span class="name">Mohammad Suleiman</span>
+        <span class="job">Pogrammer</span>
+      </div>
+
+      <div class="media-buttons">
+        <a href="#" style="background: #4267b2" class="link">
+          <i class="bx bxl-facebook"></i>
+        </a>
+        <a href="#" style="background: #1da1f2" class="link">
+          <i class="bx bxl-twitter"></i>
+        </a>
+        <a href="#" style="background: #e1306c" class="link">
+          <i class="bx bxl-instagram"></i>
+        </a>
+        <a href="#" style="background: #ff0000" class="link">
+          <i class="bx bxl-youtube"></i>
+        </a>
+      </div>
+
+      <div class="buttons">
+        <button class="button">Call me</button>
+        <button class="button">Message</button>
+      </div>
+
+      <div class="analytics">
+        <div class="data">
+          <i class="bx bx-heart"></i>
+          <span class="number">20k</span>
+        </div>
+        <div class="data">
+          <i class="bx bx-message-rounded"></i>
+          <span class="number">20k</span>
+        </div>
+        <div class="data">
+          <i class="bx bx-share"></i>
+          <span class="number">09k</span>
+        </div>
+      </div>
+    </div>
+   </center> 
+   <br>
+  <center>
+    <div class="profile-card">
+      <div class="image">
+        <img src="images.jpeg" alt="" class="profile-img">
+      </div>
+
+      <div class="text-data">
+        <span class="name">Raymond Luanda</span>
+        <span class="job">Pogrammer</span>
+      </div>
+
+      <div class="media-buttons">
+        <a href="#" style="background: #4267b2" class="link">
+          <i class="bx bxl-facebook"></i>
+        </a>
+        <a href="#" style="background: #e1306c" class="link">
+          <i class="bx bxl-instagram"></i>
+        </a>
+        <a href="#" style="background: #ff0000" class="link">
+          <i class="bx bxl-youtube"></i>
+        </a>
+      </div>
+
+      <div class="buttons">
+        <button class="button">Call Me</button>
+        <button class="button">Message</button>
+      </div>
+
+      <div class="analytics">
+        <div class="data">
+          <i class="bx bx-heart"></i>
+          <span class="number">60k</span>
+        </div>
+        <div class="data">
+          <i class="bx bx-message-rounded"></i>
+          <span class="number">20k</span>
+        </div>
+        <div class="data">
+          <i class="bx bx-share"></i>
+          <span class="number">12k</span>
+        </div>
+      </div>
+    </div>
+    <br>
+    <h2 class="footer">Powered By Codeeit Technology</h2>
+   </center> 
+  <script>
+/* Set the width of the side navigation to 250px and the left margin of the page content to 250px and add a black background color to body */
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+  document.getElementById("main").style.marginLeft = "250px";
+  document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+}
+
+/* Set the width of the side navigation to 0 and the left margin of the page content to 0, and the background color of body to white */
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+  document.getElementById("main").style.marginLeft = "0";
+  document.body.style.backgroundColor = "white";
+}
+  </script>
+  </body>
+</html>

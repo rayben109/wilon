@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>Welcome</title>
+<style>
+   *{
+    padding-top: 18px;
+    margin: 0px;
+    box-sizing: border-box;
+  }
+  body{
+    background-color: #8e44ad;
+  }
+   .container{
+    background-color: #fff;
+    width: 300px;
+    height: 400px;
+    border-radius: 13px;
+  }
+   input{
+    width: 250px;
+    height: 40px;
+    margin: 17px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom-color: #8e44ad;
+    background:none;
+    outline:none;
+    color: #8e44ad;
+  }
+    input::placeholder{
+    color:black;
+    font-weight: bold;
+  }
+    button{
+    width: 90px;
+    padding: 5px;
+    height: 40px;
+    font-weight: bold;
+    border-top-color: #8e44ad;
+    border-left: none;
+    border-right: none;
+    border-bottom-color: gold;
+    border-radius: 9px;
+    background: none;
+  } 
+    alert{
+    color:green;
+  }
+   img{
+     width: 60px;
+     height: 70px;
+ }
+ h2{
+   color: #8e44ad;
+ }
+</style>
+</head>
+<body>
+<center>
+  <div class="container">
+    <img src="10.png">
+    <h2>ADMIN</h2>
+    <input type="email" placeholder="Username">
+    <input type="password" placeholder="Password">
+    <button onclick="Dialog(), document.location='Dashboard.html'">LOGIN</button>
+  </div>
+</center>
+
+
+     <script>
+       function Dialog() {
+       alert("ACCESS GRANTED");
+ };
+     </script>
+</body>
+</html>

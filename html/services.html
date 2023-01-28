@@ -1,0 +1,181 @@
+<!DOCTYPE HTML>
+<html>
+ <head>
+   <title>
+     Services
+   </title>
+   <style>
+   *{
+     padding: 0px;
+     margin: 0px;
+     box-sizing: border-box;
+     font-family: 'Poppins', sans-serif;
+   }
+/* The side navigation menu */
+.sidenav {
+  height: 100%; /* 100% Full-height */
+  width: 0; /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Stay on top */
+  top: 0; /* Stay at the top */
+  left: 0;
+  background-color: #8e44ad; /* purple*/
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 60px; /* Place content 60px from the top */
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
+
+/* The navigation menu links */
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #fff;
+  display: block;
+  transition: 0.3s;
+  font-weight: bold;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+ #icon1{
+   float: left;
+   padding: 0px;
+   margin: 7px;
+   font-size: 30px;
+   color: white;
+ }
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+.nav-link{
+  color: #8e44ad;
+}
+body{
+   background-color: #8e44ad;
+ }
+ h2{
+    padding-top: 13px;
+    width: 100%;
+    height: 60px;
+    border-bottom: 2px solid;
+    border-bottom-width: 70%;
+    font-weight: bold;
+    color: white;
+  }
+h1{
+    padding-top: 13px;
+    width: 100%;
+    height: 60px;
+    font-weight: bold;
+    color: white;
+  }
+  h3{
+    color: #8e44ad;
+    font-family: Sans-Serif;
+    font-weight: 600;
+  }
+  .container{
+    background-color: white;
+    width: 80%;
+    height: 340px;
+    border-radius: 13px;
+  }
+  img{
+    width: 78%;
+    height: 60%;
+    border-radius: 8px;
+  }
+   </style>
+   
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+ </head>
+ <body>
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="Dashboard.html">Dashboard</a>
+  <a href="profile.html">Profile</a>
+  <a href="#">Client History</a>
+  <a href="#">Setting</a>
+  <a href="services.html">Services</a>
+  <a href="contact.html">Contact us</a>
+</div>
+
+<!-- Use any element to open the sidenav -->
+<span onclick="openNav()" id="icon1"><i class="fa fa-fw fa-bars"></i></span>
+
+<!-- Add all page content inside this div if you want the side nav to push page content to the right (not used if you only want the sidenav to sit on top of the page -->
+
+  <div class="dashboard">
+    <h2 class="text-center text-white">
+      Services
+    </h2>
+  </div>
+  <br>
+  <center>
+    <h1>Codeeit Technology</h1>
+    <br>
+<div class="container">
+  <br>
+  <img src="4.jpg">
+  <br>
+  <br>
+  <h3>Website Design</h3>
+  <h3>Web Hosting</h3>
+</div>
+<br>
+<div class="container">
+  <br>
+  <img src="2.jpg">
+  <br>
+  <br>
+  <h3>We Transform idea into Real</h3>
+</div>
+<br>
+<div class="container">
+  <br>
+  <img src="7.jpg">
+  <br>
+  <br>
+  <h3>Website Management</h3>
+  <h3>Digital marketing</h3>
+</div>
+<br>
+<div class="container">
+  <br>
+  <img src="9.png">
+  <br>
+  <br>
+  <h3>Mobile App Development</h3>
+</div>
+</center>
+ <script>
+/* Set the width of the side navigation to 250px and the left margin of the page content to 250px and add a black background color to body */
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+  document.getElementById("main").style.marginLeft = "250px";
+  document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+}
+
+/* Set the width of the side navigation to 0 and the left margin of the page content to 0, and the background color of body to white */
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+  document.getElementById("main").style.marginLeft = "0";
+  document.body.style.backgroundColor = "white";
+}
+  </script>
+  </body>
+  </html>
