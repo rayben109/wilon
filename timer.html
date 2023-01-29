@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timer Script</title>
+</head>
+<body>
+    <label for="start">Start date:</label>
+    <input type="datetime-local" id="start" name="trip-start" value="">
+    <p id="time"></p>
+
+
+
+
+
+
+    <script>
+        //Gettting time from user input 
+        const startDate = document.querySelector('input[type="datetime-local"]').value
+       
+
+        //Settting the date we are counting down to
+        const countDownDate = new Date(`${startDate}`).getTime()
+
+        //Updating countdown after every 1 second
+        let UpdateCountDown = setInterval( function() {
+            console.log(countDownDate)
+            //Gettting today's date and time
+            const now = new Date().getTime()
+
+            //Getting difference between now and date to count down to
+            const differenceInDates = countDownDate - now
+
+            //Calculating time for days, hours, minutes, and seconds
+            const days = Math.floor(differenceInDates / (1000*60*60*24))
+            const hours = Math.floor((differenceInDates % (1000*60*60*24)) / (1000*60*60))
+            const minutes = Math.floor((differenceInDates % (1000*60*60*24)) / (1000*60))
+            const seconds = Math.floor((differenceInDates % (1000*60*60*24)) / 1000)
+
+            //Displaying the results in the element with id="time"
+            document.querySelector("#time").innerHTML = days + hours + minutes + seconds
+
+            //If the countdown is finished, return EXPIRED!!
+            if (differenceInDates < 0) {
+                clearInterval(UpdateCountDown)
+            }
+
+            document.querySelector("#time").innerHTML = "EXPIRED!"
+
+
+        }, 1000)    
+    </script>
+</body>
+</html>
